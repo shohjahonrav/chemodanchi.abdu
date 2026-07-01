@@ -1,0 +1,297 @@
+export interface Product {
+  id: string;
+  name: string;
+  price: number;
+  originalPrice?: number;
+  rating: number;
+  reviewCount: number;
+  image: string;
+  images: string[];
+  category: string;
+  colors: string[];
+  sizes: string[];
+  description: string;
+  badge?: string;
+  inStock: boolean;
+  specs?: Record<string, string>;
+}
+
+export const products: Product[] = [
+  {
+    id: "1",
+    name: "Elite Hardshell Carry-On",
+    price: 489,
+    originalPrice: 599,
+    rating: 4.8,
+    reviewCount: 342,
+    image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&h=700&fit=crop&auto=format",
+    images: [
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&h=700&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&h=700&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&h=700&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1512090986-d9a0fc2d1c2d?w=600&h=700&fit=crop&auto=format",
+    ],
+    category: "Luggage",
+    colors: ["#0B0B0B", "#2C2C2C", "#8B7355", "#F5F5F0"],
+    sizes: ["Carry-On", "Medium", "Large"],
+    description: "Crafted from aerospace-grade polycarbonate, the Elite Hardshell delivers unmatched protection with a featherlight feel. TSA-approved locks, silent spinner wheels, and a premium leather-wrapped handle make every journey effortless. The interior features a fully lined compartment with a suede-like finish and compression straps.",
+    badge: "Best Seller",
+    inStock: true,
+    specs: {
+      Material: "Aerospace-grade polycarbonate",
+      Weight: "2.8 kg",
+      Dimensions: "55 × 40 × 20 cm",
+      Capacity: "38L",
+      Wheels: "360° silent spinner wheels",
+      Lock: "TSA-approved combination lock",
+      Warranty: "2-year manufacturer warranty",
+    },
+  },
+  {
+    id: "2",
+    name: "Voyager Cabin Bag",
+    price: 329,
+    rating: 4.7,
+    reviewCount: 218,
+    image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&h=700&fit=crop&auto=format",
+    images: [
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&h=700&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&h=700&fit=crop&auto=format",
+    ],
+    category: "Luggage",
+    colors: ["#1A1A2E", "#4A4A6A", "#8B7355"],
+    sizes: ["Carry-On"],
+    description: "The Voyager Cabin Bag is engineered for the frequent flier who refuses to compromise. Lightweight aluminium frame, four double-wheel spinners, and a hidden USB charging port put sophistication and utility in perfect harmony.",
+    badge: "New",
+    inStock: true,
+    specs: {
+      Material: "Aluminium frame with polycarbonate shell",
+      Weight: "3.1 kg",
+      Dimensions: "55 × 38 × 22 cm",
+      Capacity: "40L",
+      Wheels: "Double spinner wheels",
+      Lock: "TSA-approved",
+      Warranty: "2-year warranty",
+    },
+  },
+  {
+    id: "3",
+    name: "Explorer Pro Backpack",
+    price: 259,
+    rating: 4.6,
+    reviewCount: 189,
+    image: "https://images.unsplash.com/photo-1547949003-9792a18a2601?w=600&h=700&fit=crop&auto=format",
+    images: [
+      "https://images.unsplash.com/photo-1547949003-9792a18a2601?w=600&h=700&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&h=700&fit=crop&auto=format",
+    ],
+    category: "Backpacks",
+    colors: ["#0B0B0B", "#2C2C2C", "#1A1A2E"],
+    sizes: ["30L", "40L"],
+    description: "The Explorer Pro bridges the gap between urban carry and wilderness adventure. Padded 15-inch laptop sleeve, hidden anti-theft pockets, and weather-resistant Cordura fabric keep your essentials secure from boardroom to basecamp.",
+    inStock: true,
+    specs: {
+      Material: "900D Cordura nylon",
+      Weight: "1.4 kg",
+      Dimensions: "48 × 32 × 20 cm",
+      Capacity: "40L",
+      Laptop: "Fits up to 15-inch laptop",
+      Water: "Water-resistant coating",
+      Warranty: "2-year warranty",
+    },
+  },
+  {
+    id: "4",
+    name: "Nomad Duffel Pro",
+    price: 189,
+    originalPrice: 239,
+    rating: 4.5,
+    reviewCount: 156,
+    image: "https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=600&h=700&fit=crop&auto=format",
+    images: [
+      "https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=600&h=700&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&h=700&fit=crop&auto=format",
+    ],
+    category: "Duffel Bags",
+    colors: ["#0B0B0B", "#8B7355", "#4A3728"],
+    sizes: ["40L", "60L"],
+    description: "Full-grain leather handles, solid brass hardware, and a waxed canvas shell make the Nomad Duffel a timeless weekend companion. The shoe compartment keeps fresh clothes separate from worn ones.",
+    badge: "Sale",
+    inStock: true,
+    specs: {
+      Material: "Waxed canvas with leather trim",
+      Weight: "1.2 kg",
+      Dimensions: "60 × 30 × 28 cm",
+      Capacity: "50L",
+      Handles: "Full-grain leather",
+      Hardware: "Solid brass",
+      Warranty: "1-year warranty",
+    },
+  },
+  {
+    id: "5",
+    name: "Elite Hardshell Large",
+    price: 589,
+    rating: 4.9,
+    reviewCount: 274,
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=700&fit=crop&auto=format",
+    images: [
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=700&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&h=700&fit=crop&auto=format",
+    ],
+    category: "Luggage",
+    colors: ["#0B0B0B", "#2C2C2C", "#F5F5F0"],
+    sizes: ["Large"],
+    description: "The large sibling to our best-selling carry-on. Identical premium materials scaled up for extended journeys. Expandable design adds 10% extra packing volume when needed.",
+    badge: "Premium",
+    inStock: true,
+    specs: {
+      Material: "Aerospace-grade polycarbonate",
+      Weight: "3.8 kg",
+      Dimensions: "75 × 52 × 30 cm",
+      Capacity: "86L",
+      Wheels: "360° silent spinner wheels",
+      Lock: "TSA-approved combination lock",
+      Warranty: "2-year manufacturer warranty",
+    },
+  },
+  {
+    id: "6",
+    name: "Business Slim Briefcase",
+    price: 349,
+    rating: 4.7,
+    reviewCount: 132,
+    image: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&h=700&fit=crop&auto=format",
+    images: [
+      "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&h=700&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1547949003-9792a18a2601?w=600&h=700&fit=crop&auto=format",
+    ],
+    category: "Travel Accessories",
+    colors: ["#0B0B0B", "#4A3728"],
+    sizes: ["One Size"],
+    description: "Hand-stitched Italian leather exterior, suede lining, and a dedicated 16-inch laptop sleeve. The hidden back sleeve slips over rolling luggage handles for hands-free airport navigation.",
+    inStock: true,
+    specs: {
+      Material: "Full-grain Italian leather",
+      Weight: "0.9 kg",
+      Dimensions: "42 × 32 × 8 cm",
+      Laptop: "Fits up to 16-inch laptop",
+      Lining: "Microsuede",
+      Handles: "Leather-wrapped",
+      Warranty: "2-year warranty",
+    },
+  },
+  {
+    id: "7",
+    name: "Weekend Duffle Canvas",
+    price: 229,
+    rating: 4.4,
+    reviewCount: 98,
+    image: "https://images.unsplash.com/photo-1512090986-d9a0fc2d1c2d?w=600&h=700&fit=crop&auto=format",
+    images: [
+      "https://images.unsplash.com/photo-1512090986-d9a0fc2d1c2d?w=600&h=700&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=600&h=700&fit=crop&auto=format",
+    ],
+    category: "Duffel Bags",
+    colors: ["#2C4A2E", "#2C2C2C", "#4A3728"],
+    sizes: ["35L", "50L"],
+    description: "Rugged 12oz waxed canvas with leather reinforcements. Designed for the traveler who appreciates character that develops over time. Carries essentials for a three-day getaway with room to spare.",
+    inStock: true,
+    specs: {
+      Material: "12oz waxed cotton canvas",
+      Weight: "1.1 kg",
+      Dimensions: "55 × 28 × 25 cm",
+      Capacity: "38L",
+      Handles: "Leather",
+      Closure: "Heavy brass zipper",
+      Warranty: "1-year warranty",
+    },
+  },
+  {
+    id: "8",
+    name: "Travel Essentials Kit",
+    price: 149,
+    rating: 4.6,
+    reviewCount: 311,
+    image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&h=700&fit=crop&auto=format",
+    images: [
+      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&h=700&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&h=700&fit=crop&auto=format",
+    ],
+    category: "Travel Accessories",
+    colors: ["#0B0B0B", "#8B7355"],
+    sizes: ["One Size"],
+    description: "A curated collection of travel essentials: leather passport holder, luggage tags, packing cubes, and a cable organizer. Presented in a luxury gift box, this set makes the perfect travel companion.",
+    badge: "Gift Set",
+    inStock: true,
+    specs: {
+      Contents: "Passport holder, luggage tags (×2), packing cubes (×3), cable organizer",
+      Material: "Full-grain leather, premium nylon",
+      Weight: "0.6 kg",
+      Packaging: "Luxury gift box",
+      Warranty: "1-year warranty",
+    },
+  },
+];
+
+export const categories = ["All", "Luggage", "Backpacks", "Duffel Bags", "Travel Accessories"];
+
+export const testimonials = [
+  {
+    id: "1",
+    name: "Sarah Kessler",
+    role: "Frequent Business Traveler",
+    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop&auto=format",
+    quote: "The Elite Hardshell survived three international trips without a single scratch. The quality is extraordinary — this is the luggage I was always searching for.",
+    rating: 5,
+  },
+  {
+    id: "2",
+    name: "James Morrison",
+    role: "Travel Photographer",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&auto=format",
+    quote: "I've tried every premium luggage brand. Chemadonchi Abdu stands apart — the craftsmanship is meticulous, the design is timeless. Worth every penny.",
+    rating: 5,
+  },
+  {
+    id: "3",
+    name: "Aisha Patel",
+    role: "Interior Designer",
+    avatar: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=80&h=80&fit=crop&auto=format",
+    quote: "The gold hardware details are stunning. People stop me in airports to ask about my bags. It is the perfect blend of luxury and practicality.",
+    rating: 5,
+  },
+];
+
+export const blogPosts = [
+  {
+    id: "1",
+    title: "The Art of Packing Light Without Sacrificing Style",
+    excerpt: "Discover the techniques that seasoned travelers use to pack everything they need in carry-on only, while maintaining a polished, put-together look.",
+    date: "June 12, 2026",
+    category: "Travel Tips",
+    readTime: "5 min read",
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop&auto=format",
+    author: "Elena Kovács",
+  },
+  {
+    id: "2",
+    title: "5 Must-Have Travel Accessories for the Modern Traveler",
+    excerpt: "From tech organizers to leather passport holders, these carefully selected accessories transform every journey into a first-class experience.",
+    date: "May 28, 2026",
+    category: "Accessories",
+    readTime: "4 min read",
+    image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=400&fit=crop&auto=format",
+    author: "Marco Ferretti",
+  },
+  {
+    id: "3",
+    title: "How Premium Luggage Changes the Way You Travel",
+    excerpt: "Investing in quality luggage is investing in peace of mind. We explore how the right bag can transform your travel experience from stressful to serene.",
+    date: "May 15, 2026",
+    category: "Lifestyle",
+    readTime: "6 min read",
+    image: "https://images.unsplash.com/photo-1500835556837-99ac94a94552?w=600&h=400&fit=crop&auto=format",
+    author: "Sofia Andersen",
+  },
+];
